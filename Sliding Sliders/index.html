@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <center>
+    <section>
+        <img class="superslider" src="Heinz kethup is great.jpg" style="height:1000px;" width="1000px">
+        <img class="superslider" src="suprah man.jpg" style="height:1000px;" width="1000px">
+    </section>
+     </center>
+    <script>
+        var fart= 0;
+        carousel();
+
+        function carousel() {
+            var I;
+            var x = document.getElementsByClassName("superslider");
+            for (I=0; I < x.length; I++) {
+            x [I].style.display = "none";
+            }
+
+            fart++;
+            if (fart > x.length){fart=1}
+            x [fart-1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+    </script>
+</body>
+</html>
