@@ -8,6 +8,13 @@
 
 </head>
 <body>
+  <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">About us</a>
+        <a href="#">Contact us</a>
+    </div>
+    
     <section class="section section-light">
         <span class="border trans" style="font-size:40px;">
             <center>Welcome all to this website!</center>
@@ -26,8 +33,33 @@
         </div>
     </div>
 
+<section>
+        <img class="Myslides" src="image1.jpg" style="height: 500px;">
+        <img class="Myslides" src="image3.jpg" style="height: 500px;">
+    </section>
+
+
+<script>
+        var fart= 0;
+        carousel();
+
+        function carousel() {
+            var I;
+            var x = document.getElementsByClassName("Myslides");
+            for (I=0; I < x.length; I++) {
+            x [I].style.display = "none";
+            }
+
+            fart++;
+            if (fart > x.length){fart=1}
+            x [fart-1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+    </script>
+
     <div class="footer">
         <p>@copy all rights and reserved by Longchapong Longchar.</p>
     </div>
+    
 </body>
 </html>
